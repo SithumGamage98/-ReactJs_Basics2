@@ -1,0 +1,84 @@
+//In App.js
+import './App.css';
+
+function App() {
+  return (
+    <div>
+     <Dest Name="Nadun" Posi="Engineer"/>
+     <Destructure2 coun = "Sri Lanka" med ="youtube"/>
+    
+    
+    
+    </div>
+  );
+}
+
+export default App;
+
+//Destrcture ------------------------------FUNCTIONS BASE COMPONENTS----------------------------------------------
+
+import React from "react";
+//Destrucuring ####################### Meth 01
+const Dest = ({Name,Posi})=>{
+
+     return(
+        <div>
+
+            <diV>Name is : {Name}---------- Positio is : {Posi}</diV>
+
+        </div>
+
+
+     )
+
+
+}
+
+export default Dest;*/
+
+//Destructuring #####################Meth 02
+const Dest = (props)=>{
+
+    //----
+    const {Name,Posi} = props;
+    return(
+       <div>
+
+           <diV>Name is : {Name}---------- Position is : {Posi}</diV>
+
+       </div>
+
+
+    )
+
+
+}
+
+export default Dest;
+
+
+//Destrcture ------------------------------CLASS BASE COMPONENTS----------------------------------------------this.props
+
+
+import React, { Component } from 'react'
+
+ class Destructure2 extends Component {
+
+
+  render() {
+
+    //Destructure all the props values
+    const {coun , med} = this.props;
+    // const {state1,state2} = this.state;
+    return (
+      <div>
+
+        Country : {coun} -------------Soasal Media : {med}
+        
+
+      </div>
+    )
+  }
+}
+
+export default Destructure2
