@@ -1,0 +1,54 @@
+--------------------Functional Components
+import React from "react";
+
+
+const Dest = ()=>{
+
+    function clickMe(){
+
+        console.log('Clicked');
+
+
+    }
+ 
+    return(
+       <div>
+ 
+      <button onClick={clickMe}>Function Click</button>
+       </div>
+
+
+    )
+
+
+}
+
+export default Dest;
+
+--------------------Class components---------------
+
+
+import React, { PureComponent } from 'react'
+
+
+export class App2 extends PureComponent {
+
+  ClassClick(){
+
+    console.log('Class Click Done');
+
+}
+
+  render() {
+
+    return (
+      <div>
+
+        <button onClick={this.ClassClick}>Class Event</button>
+
+      </div>
+    )
+  }
+}
+
+export default App2;
