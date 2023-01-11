@@ -1,0 +1,76 @@
+//-----------In parent Classs
+
+
+import React, { Component } from 'react'
+//import App2 from './childComponent';
+
+ class App3 extends Component {
+
+  constructor(props){
+
+    super(props)
+    this.state = {
+
+      parentName : 'Parent'
+
+    }
+
+      this.parentMessage = this.parentMessage.bind(this)
+  }
+
+  parentMessage(childName){
+      
+      alert(this.state.parentName)
+      alert(childName)
+  }
+
+
+  render() {
+
+  
+    return (
+      <div>
+        <App2 message={this.parentMessage}/>
+      </div>
+    )
+  }
+}
+export default App3;
+
+
+//------------In child class
+
+import React from 'react'
+
+
+ function App2(props) {
+  return (
+    <div>
+      
+      <button onClick={()=>props.message('child')}>My Button</button>
+    </div>
+  )
+}
+
+export default App2;
+
+
+//You need to route the parent class in the App.js
+
+
+import Blindint_event from './components/Blindint_event';
+
+
+function App() {
+  return (
+    <div>
+    
+    <Blindint_event/>
+
+    </div>
+  );
+}
+
+export default App;
+
+
